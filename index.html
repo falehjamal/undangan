@@ -4037,8 +4037,8 @@
 		typeof flexibility !== "undefined" && flexibility(document.documentElement);
 		//# sourceURL=astra-flexibility-js-after
 	</script>
-	<script src="../wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-	<script src="../wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+	<script src="wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+	<script src="wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 	<script src="wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"
 		id="font-awesome-4-shim-js"></script>
 	<link rel="https://api.w.org/" href="wp-json/" />
@@ -4162,6 +4162,31 @@
 			max-width: 420px;
 			margin: 0 auto;
 		}
+		#ajaib-btnCover,
+		#ajaib-btnCover.elementor-invisible {
+			visibility: visible !important;
+			opacity: 1 !important;
+			animation: none !important;
+			transform: none !important;
+			position: relative;
+			z-index: 5;
+			cursor: pointer;
+		}
+		#ajaib-cover > .elementor-container,
+		#ajaib-cover .elementor-widget-wrap.elementor-element-populated {
+			min-height: 100dvh;
+		}
+		#ajaib-cover .elementor-widget-wrap.elementor-element-populated {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			box-sizing: border-box;
+		}
+		#ajaib-cover .elementor-element-64c8aa9b {
+			--spacer-size: 0px !important;
+			flex: 1 1 auto;
+			min-height: 24px;
+		}
 	</style>
 </head>
 
@@ -4276,14 +4301,13 @@
 												</h2>
 											</div>
 										</div>
-										<div class="elementor-element elementor-element-4c26d90f elementor-align-center lw-sticky-section-no elementor-invisible elementor-widget elementor-widget-button"
+										<div class="elementor-element elementor-element-4c26d90f elementor-align-center lw-sticky-section-no elementor-widget elementor-widget-button"
 											data-id="4c26d90f" data-element_type="widget" data-e-type="widget"
 											id="ajaib-btnCover"
-											data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}"
 											data-widget_type="button.default">
 											<div class="elementor-widget-container">
 												<div class="elementor-button-wrapper">
-													<a class="elementor-button elementor-size-xs" role="button">
+													<a class="elementor-button elementor-size-xs" role="button" href="#">
 														<span class="elementor-button-content-wrapper">
 															<span class="elementor-button-icon">
 																<i aria-hidden="true" class="fas fa-leaf"></i> </span>
@@ -6144,7 +6168,7 @@
 			document.addEventListener(event, lazyloadRunObserver);
 		});
 	</script>
-	<script src="../wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"
+	<script src="wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"
 		fetchpriority="low"></script>
 	<script id="astra-theme-js-js-extra">
 		var astra = { "break_point": "921", "isRtl": "", "is_scroll_to_id": "1", "is_scroll_to_top": "", "is_header_footer_builder_active": "1", "responsive_cart_click": "flyout", "is_dark_palette": "" };
@@ -6167,7 +6191,7 @@
 		id="elementor-webpack-runtime-js"></script>
 	<script src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js"
 		id="elementor-frontend-modules-js"></script>
-	<script src="../wp-includes/js/jquery/ui/core.min.js" id="jquery-ui-core-js"></script>
+	<script src="wp-includes/js/jquery/ui/core.min.js" id="jquery-ui-core-js"></script>
 	<script id="elementor-frontend-js-before">
 		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "hasCustomBreakpoints": false }, "version": "3.35.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "container": true, "theme_builder_v2": true, "nested-elements": true, "home_screen": true, "global_classes_should_enforce_capabilities": true, "e_variables": true, "cloud-library": true, "e_opt_in_v4_page": true, "e_components": true, "e_interactions": true, "e_editor_one": true, "import-export-customization": true, "e_pro_variables": true }, "urls": { "assets": "https:\/\/invite.leafitation.com\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/invite.leafitation.com\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/invite.leafitation.com\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "39d0f8f7e7" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 14975, "title": "Vintage%20Jawa%2004%20Foto%20-%20leafitation.com", "excerpt": "", "featuredImage": false } };
 		//# sourceURL=elementor-frontend-js-before
@@ -6191,8 +6215,8 @@
 		id="master-addons-particles-js"></script>
 	<script src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js"
 		id="elementor-pro-webpack-runtime-js"></script>
-	<script src="../wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
-	<script src="../wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
+	<script src="wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
+	<script src="wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
 	<script id="wp-i18n-js-after">
 		wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
 		//# sourceURL=wp-i18n-js-after
@@ -6227,9 +6251,58 @@
 		const a = JSON.parse(document.getElementById("wp-emoji-settings").textContent), o = (window._wpemojiSettings = a, "wpEmojiSettingsSupports"), s = ["flag", "emoji"]; function i(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function c(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data); e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0); const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data); return t.every((e, t) => e === a[t]) } function p(e, t) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var n = e.getImageData(16, 16, 1, 1); for (let e = 0; e < n.data.length; e++)if (0 !== n.data[e]) return !1; return !0 } function u(e, t, n, a) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !a(e, "\ud83e\u1fac8") }return !1 } function f(e, t, n, a) { let r; const o = (r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : document.createElement("canvas")).getContext("2d", { willReadFrequently: !0 }), s = (o.textBaseline = "top", o.font = "600 32px Arial", {}); return e.forEach(e => { s[e] = t(o, e, n, a) }), s } function r(e) { var t = document.createElement("script"); t.src = e, t.defer = !0, document.head.appendChild(t) } a.supports = { everything: !0, everythingExceptFlag: !0 }, new Promise(t => { let n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), c.toString(), p.toString()].join(",") + "));", a = new Blob([e], { type: "text/javascript" }); const r = new Worker(URL.createObjectURL(a), { name: "wpTestEmojiSupports" }); return void (r.onmessage = e => { i(n = e.data), r.terminate(), t(n) }) } catch (e) { } i(n = f(s, u, c, p)) } t(n) }).then(e => { for (const n in e) a.supports[n] = e[n], a.supports.everything = a.supports.everything && a.supports[n], "flag" !== n && (a.supports.everythingExceptFlag = a.supports.everythingExceptFlag && a.supports[n]); var t; a.supports.everythingExceptFlag = a.supports.everythingExceptFlag && !a.supports.flag, a.supports.everything || ((t = a.source || {}).concatemoji ? r(t.concatemoji) : t.wpemoji && t.twemoji && (r(t.twemoji), r(t.wpemoji))) });
 		//# sourceURL=wp-includes/js/wp-emoji-loader.min.js
 	</script>
-	<script defer=""
-		src="data:text/javascript;base64,ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsIGZ1bmN0aW9uKCkgewogICAvLyBNZW1hc3Rpa2FuIGhhbGFtYW4gc2VsYWx1IGRpbXVhdCBkYXJpIGF0YXMgdGFucGEgYW5pbWFzaQogICAgd2luZG93LnNjcm9sbFRvKDAsIDApOwoKICAgIC8vIE1lbmFtYmFoa2FuIG1ldGEgdGFnIGtlIGhlYWQKICAgIGNvbnN0IG1ldGFWaWV3cG9ydCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ21ldGEnKTsKICAgIG1ldGFWaWV3cG9ydC5uYW1lID0gInZpZXdwb3J0IjsKICAgIG1ldGFWaWV3cG9ydC5jb250ZW50ID0gIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAsIG1heGltdW0tc2NhbGU9MS4wLCB1c2VyLXNjYWxhYmxlPW5vIjsKICAgIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQobWV0YVZpZXdwb3J0KTsKCiAgICBjb25zdCB0b21ib2xPcGVuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImFqYWliLWJ0bkNvdmVyIik7CgogICAgLy8gQ2VrIGFwYWthaCBlbGVtZW4gYWphaWItb3BlbiBhZGEKICAgIGlmICh0b21ib2xPcGVuKSB7CiAgICAgICAgZGlzYWJsZVNjcm9sbGluZygpOwogICAgICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3dZID0gImhpZGRlbiI7CiAgICAgICAgZG9jdW1lbnQuYm9keS5zdHlsZS5oZWlnaHQgPSAiMTAwdmgiOyAvLyBQZXJiYWlrYW4gdHlwbzogaGVpZ3RoIC0+IGhlaWdodAogICAgICAgIHRvbWJvbE9wZW4ub25jbGljayA9IGZ1bmN0aW9uKCkgewogICAgICAgICAgICBteUZ1bmN0aW9uKCk7CiAgICAgICAgfTsKICAgIH0KCiAgICAvLyBGdW5nc2kgdW50dWsgbWVub25ha3RpZmthbiBzY3JvbGxpbmcKICAgIGZ1bmN0aW9uIGRpc2FibGVTY3JvbGxpbmcoKSB7CiAgICAgICAgdmFyIHggPSB3aW5kb3cuc2Nyb2xsWDsKICAgICAgICB2YXIgeSA9IHdpbmRvdy5zY3JvbGxZOwogICAgICAgIHdpbmRvdy5vbnNjcm9sbCA9IGZ1bmN0aW9uKCkgewogICAgICAgICAgICB3aW5kb3cuc2Nyb2xsVG8oeCwgeSk7CiAgICAgICAgfTsKICAgIH0KCiAgICAvLyBGdW5nc2kgdW50dWsgbWVuZ2FrdGlma2FuIHNjcm9sbGluZwogICAgZnVuY3Rpb24gZW5hYmxlU2Nyb2xsaW5nKCkgewogICAgICAgIHdpbmRvdy5vbnNjcm9sbCA9IGZ1bmN0aW9uKCkge307CiAgICB9CgogICAgLy8gRnVuZ3NpIHVudHVrIG1lbXV0YXIgYXVkaW8KICAgIGZ1bmN0aW9uIHBsYXlBdWRpbygpIHsKICAgICAgICBjb25zdCB4ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInNvbmciKTsKICAgICAgICBpZiAoeCkgewogICAgICAgICAgICB4LnBsYXkoKTsKICAgICAgICB9CiAgICB9CgogICAgLy8gRnVuZ3NpIHVudHVrIGRpamFsYW5rYW4gc2FhdCB0b21ib2wgZGlrbGlrCiAgICBmdW5jdGlvbiBteUZ1bmN0aW9uKCkgewogICAgICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3dZID0gInVuc2V0IjsKICAgICAgICB0b21ib2xPcGVuLnN0eWxlLnZpc2liaWxpdHkgPSAiaGlkZGVuIjsKICAgICAgICBlbmFibGVTY3JvbGxpbmcoKTsKICAgICAgICBwbGF5QXVkaW8oKTsKICAgIH0KCiAgICAvLyBqUXVlcnkgdW50dWsgZWZlayBmYWRlCiAgICBqUXVlcnkoZnVuY3Rpb24oJCkgewogICAgICAgICQoJyNhamFpYi1idG5Db3ZlcicpLmNsaWNrKGZ1bmN0aW9uKCkgewogICAgICAgICAgICAkKHRoaXMpLnBhcmVudHMoJyNhamFpYi1jb3ZlcicpLmZhZGVPdXQoNTAwKTsKICAgICAgICB9KTsKICAgIH0pOwp9KTs=">
-		</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			window.scrollTo(0, 0);
+
+			var tombolOpen = document.getElementById('ajaib-btnCover');
+			var cover = document.getElementById('ajaib-cover');
+			if (!tombolOpen) {
+				return;
+			}
+
+			function disableScrolling() {
+				var x = window.scrollX;
+				var y = window.scrollY;
+				window.onscroll = function () {
+					window.scrollTo(x, y);
+				};
+			}
+
+			function enableScrolling() {
+				window.onscroll = function () {};
+			}
+
+			function playAudio() {
+				var song = document.getElementById('song');
+				if (song) {
+					song.play().catch(function () {});
+				}
+			}
+
+			function openInvitation(e) {
+				if (e) {
+					e.preventDefault();
+				}
+				document.body.style.overflowY = 'unset';
+				document.body.style.height = '';
+				enableScrolling();
+				playAudio();
+				if (cover) {
+					cover.style.transition = 'opacity 0.5s ease';
+					cover.style.opacity = '0';
+					setTimeout(function () {
+						cover.style.display = 'none';
+					}, 500);
+				}
+			}
+
+			disableScrolling();
+			document.body.style.overflowY = 'hidden';
+			document.body.style.height = '100vh';
+			tombolOpen.addEventListener('click', openInvitation);
+		});
+	</script>
 	<style>
 		@import url("data:text/css;base64,I2Rlc2tfY292IHsKICAgIHBvc2l0aW9uOiBmaXhlZDsgIAogICAgbGVmdDogMDsgIAogICAgdG9wOiAwOyAgCiAgICB3aWR0aDogY2FsYygxMDAlIC0gNTAwcHgpOyAgCiAgICBoZWlnaHQ6IDEwMHZoOyAgCiAgICBvdmVyZmxvdzogaGlkZGVuOyAKfQoKI2lzaSB7CiAgICBtYXJnaW4tbGVmdDogY2FsYygxMDAlIC0gNTAwcHgpOyAgCiAgICB3aWR0aDogNTAwcHg7IAp9CgouYWphaWJmaXhlZCAuZWxlbWVudG9yLWJhY2tncm91bmQtb3ZlcmxheSB7CiAgICBwb3NpdGlvbjogZml4ZWQgIWltcG9ydGFudDsgCiAgICB0b3A6IDAhaW1wb3J0YW50OwogICAgbGVmdDogY2FsYygxMDAlIC0gNTAwcHgpIWltcG9ydGFudDsKICAgIHdpZHRoOiA1MDBweCFpbXBvcnRhbnQ7CiAgICBwb2ludGVyLWV2ZW50czpub25lOwp9CgpAbWVkaWEgKG1heC13aWR0aDogNTAwcHgpIHsKICAgICNkZXNrX2NvdiB7CiAgICAgICAgZGlzcGxheTogbm9uZTsgCiAgICB9Cn0KCkBtZWRpYSAobWF4LXdpZHRoOiA5MDBweCkgYW5kIChtaW4td2lkdGg6NzY4cHgpIHsKICAgICNkZXNrX2NvdiB7CiAgICAgICAgd2lkdGg6IDUwJTsgCiAgICB9CgogICAgI2lzaSB7CiAgICAgICAgbWFyZ2luLWxlZnQ6IDUwJTsgCiAgICAgICAgd2lkdGg6IDUwJTsgCiAgICB9CiAgICAuYWphaWJmaXhlZCAuZWxlbWVudG9yLWJhY2tncm91bmQtb3ZlcmxheSB7CiAgICAgICAgbGVmdDogNTAlIWltcG9ydGFudDsKICAgICAgICB3aWR0aDogNTAlIWltcG9ydGFudDsKICAgIH0KfQpAbWVkaWEgKG1heC13aWR0aDogNzY4cHgpIHsKICAgICNkZXNrX2NvdiB7CiAgICAgICAgZGlzcGxheTogbm9uZTsgCiAgICB9CgogICAgI2lzaSB7CiAgICAgICAgbWFyZ2luLWxlZnQ6IGF1dG87CiAgICAgICAgbWFyZ2luLXJpZ2h0OiBhdXRvOwogICAgICAgIHdpZHRoOiAxMDAlOwogICAgfQogICAgLmFqYWliZml4ZWQgLmVsZW1lbnRvci1iYWNrZ3JvdW5kLW92ZXJsYXkgewogICAgICAgIC8qIEF0dXIgdWxhbmcgcHJvcGVydGkgdW50dWsgc2VzdWFpIGRlbmdhbiBhdHVyYW4gI2lzaSBwYWRhIHVrdXJhbiBsYXlhciBpbmkgKi8KICAgICAgICBsZWZ0OiAwIWltcG9ydGFudDsKICAgICAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50OyAvKiBTZXN1YWkgZGVuZ2FuIGxlYmFyICNpc2kgcGFkYSBicmVha3BvaW50IGluaSAqLwogICAgfQp9Cgpib2R5ewogICAgb3ZlcmZsb3cteDogaGlkZGVuICFpbXBvcnRhbnQ7Cn0KaHRtbCB7CiAgc2Nyb2xsLWJlaGF2aW9yOiBhdXRvICFpbXBvcnRhbnQ7IC8qIE5vbmFrdGlma2FuIHNtb290aCBzY3JvbGxpbmcgKi8KfQpAbWVkaWEgKG1pbi13aWR0aDogOTkwcHgpIHsKOjotd2Via2l0LXNjcm9sbGJhciB7CiAgd2lkdGg6IDEwcHg7Cgl9Cn0KCjo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sgewogIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50Owp9Cgo6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iIHsKICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDZkZWUxOwogIGJvcmRlci1yYWRpdXM6IDIwcHg7CiAgYm9yZGVyOiAycHggc29saWQgdHJhbnNwYXJlbnQ7CiAgYmFja2dyb3VuZC1jbGlwOiBjb250ZW50LWJveDsKfQoKOjotd2Via2l0LXNjcm9sbGJhci10aHVtYjpob3ZlciB7CiAgYmFja2dyb3VuZC1jb2xvcjogI2E4YmJiZjsKfQoKI2FqYWliLWJ0bkNvdmVyewpjdXJzb3I6IHBvaW50ZXI7Cn0=");
 	</style>
