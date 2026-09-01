@@ -1,0 +1,26 @@
+.lw-sticky-section-yes {
+    position: fixed !important;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+}
+
+.lw-sticky-section-positon-top {
+    position: fixed !important;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.lw-sticky-section-positon-bottom {
+    position: fixed !important;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.lw-column-sticky .inner-wrapper-sticky {
+    width: 100%;
+}
