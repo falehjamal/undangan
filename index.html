@@ -4183,9 +4183,32 @@
 			box-sizing: border-box;
 		}
 		#ajaib-cover .elementor-element-64c8aa9b {
-			--spacer-size: 0px !important;
+			--spacer-size: 12px !important;
+			flex: 0 0 auto;
+		}
+		#ajaib-cover .elementor-element-ea3a6dc {
+			--spacer-size: 8px !important;
+			flex: 0 0 auto;
+		}
+		#ajaib-cover .cover-couple-photo {
 			flex: 1 1 auto;
-			min-height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 180px;
+			padding: 6px 10px 10px;
+		}
+		#ajaib-cover .cover-couple-photo img {
+			width: min(80%, 280px);
+			height: 100%;
+			max-height: min(48vh, 380px);
+			aspect-ratio: 3 / 4;
+			object-fit: cover;
+			object-position: center 18%;
+			border-radius: 18px;
+			border: 3px solid rgba(255, 255, 255, 0.72);
+			box-shadow: 0 10px 26px rgba(92, 64, 51, 0.28);
+			background: #f3efe8;
 		}
 	</style>
 </head>
@@ -4274,6 +4297,9 @@
 												<h2 class="elementor-heading-title elementor-size-default">Bagas &amp;
 													Indah</h2>
 											</div>
+										</div>
+										<div class="cover-couple-photo">
+											<img src="wp-content/uploads/photos/hero.jpeg" alt="Bagas &amp; Indah" />
 										</div>
 										<div class="elementor-element elementor-element-ea3a6dc lw-sticky-section-no elementor-widget elementor-widget-spacer"
 											data-id="ea3a6dc" data-element_type="widget" data-e-type="widget"
